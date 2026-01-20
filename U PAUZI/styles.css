@@ -1,0 +1,478 @@
+/*OPĆENITO*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background: #faf7f2;
+    color: #2f2a26;
+}
+
+/*HEADER i FOOTER*/
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: #faf7f2;
+    border-bottom: 1px solid #e2d8cb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    padding-left: 1rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+.logo-text h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.logo-text span{
+    font-size: 1rem;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #2f2a26;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.nav1:hover{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    background-color: #f1e9df;
+}
+
+
+
+/* HOME PAGE */
+
+.hero {
+    height: 90vh;
+    background-image: url(./slike/pozadina\ bež.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hero-obrub{
+    background-color: #f1e9df;
+    padding: 100px;
+}
+
+.hero-text {
+    text-align: center;
+    animation: fadeUp 1.5s ease;   
+}
+
+.hero-text h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.hero-text p {
+    margin-top: 1rem;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.glavnimeniobrub{
+    background-color: #f1e9df;
+    padding: 30px;
+    margin-top: 20px;
+    border:#2f2a26;
+    border-width: 5px;
+    border-style:double;
+}
+
+.glavnimenitekst {
+    text-align: justify;
+    margin-top: 1rem;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+.glavnimenitekst:hover {
+    font-size: 32px;
+}
+
+a:any-link{
+    text-decoration: none;
+    color: black;
+}
+
+.image-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.image-strip2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.image-box {
+    height: 500px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #999;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section {
+    max-width: 900px;
+    margin: 6rem auto;
+    padding: 2rem;
+}
+
+.section h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+
+
+/* MENI STRANICA */
+
+.menu-section {
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 2rem;
+}
+
+.menu-section h2 {
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover{
+    transform: scale(1.05);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.menu-card h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.menu-card .description {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.menu-card .ingredients {
+    font-size: 0.75rem;
+    color: #6b4c34;
+    letter-spacing: 0.5px;
+}
+
+/* Animacija za tekst */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+/* ABOUT STR */
+.light {
+    background: #f1e9df;
+    padding: 5rem 2rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.aboutpozadina{
+    background-image: url("./slike/pozadina\ bež.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.abouttext{
+    animation: fadeUp 1.5s ease; 
+}
+
+.about{
+  margin: auto;
+  padding: 40px 20px;
+  
+}
+
+.about-intro{
+    font-size: 18px;
+}
+
+.about-top{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  
+}
+
+/* lijevo tekst */
+.about-text{
+  width: 60%;
+}
+
+.about-text h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about-text h1{
+  font-size: 34px;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+
+.about-text p{
+    font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* desno slika */
+.about-img{
+  width: 40%;
+}
+
+.about-img img{
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+.about-gallery{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.about-gallery img{
+  width: 32%;   
+  border-radius: 12px;
+}
+
+
+/*VISIT*/
+
+.visit-wrap{
+  padding: 4rem 2rem;
+}
+
+.visit-card{
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.65);
+  padding: 3rem;
+  border-radius: 16px;
+}
+
+.visit-title{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.visit-grid{
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.visit-left, .visit-right{
+  width: 50%;
+}
+
+.visit-left h3, .visit-right h3{
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.visit-left p{
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.hours .row{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.hours .row span:last-child{
+  font-weight: 600;
+}
+
+.visit-map{
+  margin-top: 2.5rem;
+}
+
+.visit-map img{
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+
+/* mobitel */
+@media (max-width: 768px){
+  .visit-grid{
+    flex-direction: column;
+  }
+
+  .visit-left, .visit-right{
+    width: 100%;
+  }
+
+  .visit-card{
+    padding: 2rem;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.map-wrapper {
+  max-width: 700px;
+  margin: 3rem auto;
+}
+
+.map-wrapper img {
+  width: 100%;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 576px) {
+    .logo-text h1 {
+       font-size: 1.5rem;
+    }
+    .logo{
+      gap: 0.5rem;
+    }
+    .logo-text span{
+      font-size: 0.9rem;
+    }
+    .logo img{
+      width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text h1 {
+       font-size: 2rem;
+    }
+    .logo{
+      gap: 1rem;
+    }
+    .logo-text span{
+      font-size: 1rem;
+    }
+    .logo img{
+      width: 100px;
+    }
+}
+
+/* mobitel */
+@media (max-width: 800px){
+  .about-top{
+    flex-direction: column;
+  }
+  .about-text, .about-img{
+    width: 100%;
+  }
+  .about-gallery img{
+    width: 100%; 
+  }
+}
